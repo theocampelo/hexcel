@@ -28,4 +28,4 @@ python3 generate.py
 
 Your .hex file should be in the ```out/``` directory, with the same filename as the input file.
 
-Example .xlsl and .hex files can be found in the ```example_hexfile``` directory for general purposes.
+Example .xlsl and .hex files can be found in the ```example``` directory for general purposes.
