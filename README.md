@@ -2,12 +2,12 @@
 
 Generate IntelHex HEX files from Excel sheets (XLSX)
 
-# Python3 Module Requirements
+## Python3 Module Requirements
 
 * IntelHex
 * Openpyxl
 
-# Usage
+## Usage
 
 First, define the filename in generate.py:
 ```
