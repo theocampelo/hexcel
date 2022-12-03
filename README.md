@@ -1,6 +1,6 @@
 # HEXCEL v0.1
 
-Generate IntelHex HEX files from an Excel sheet of integers (XLSX)
+Generate IntelHex HEX files from an Excel sheet (XLSX)
 
 ## Python3 Module Requirements
 
