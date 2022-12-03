@@ -24,4 +24,4 @@ Then, run the program by typing:
 python3 generate.py
 ```
 
-Your .hex file should be in the out/ directory.
+Your .hex file should be in the ```out/``` directory.
