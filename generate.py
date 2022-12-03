@@ -1,21 +1,26 @@
 #!/usr/bin/python3
 
-import struct
+import re
 import openpyxl as ox
 from intelhex import IntelHex
 
-# Nome do arquivo excel
-filename = "hexcel.xlsx"
+# Set your configs
+filename    = "example.xlsx"	# Excel sheet filename inside "in/"
+size 		= 100				# Rows x columns for output
 
 ih = IntelHex()
 
-wb = ox.load_workbook(filename, data_only=True)
+wb = ox.load_workbook(
+	"in/" + filename,
+	data_only=True
+)
+
 ws = wb.active
 
 formatstring = 'chr'
 
-for x in range(1,100):
-	for y in range(1,100):
+for x in range(1, size):
+	for y in range(1, size):
 		cell  = ws.cell(row=x, column=y)
 		if cell.value != None:
 			addr  = int(hex(cell.value), 16)
@@ -23,5 +28,5 @@ for x in range(1,100):
 			
 			ih.putsz(addr, value)
 
-# Nome do arquivo de saída .hex			
-ih.write_hex_file("out/out.hex")
+out_filename = f"out/{re.split('.xlsx',filename)[0]}.hex"
+ih.write_hex_file(out_filename)
